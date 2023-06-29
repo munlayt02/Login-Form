@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login form</title>
+	<link rel = "stylesheet" href = "style.css">
+	 <script>
+    function Login()
+    {
+        
+        var name = document.getElementById("username").value;
+         var pass = document.getElementById("password").value;
+        
+      
+       
+       if(name=="julian" && pass=="123" ){
+         alert("Login Successfully");
+        }
+        else if(name=="" && pass=="" ){
+            alert("Failed");
+        }
+        else if(name=="" && pass=="123" ){
+            alert("Invalid Username!");
+        }
+        else if(name=="julian" && pass=="" ){
+            alert("Invalid Password!");
+        }
+        else{
+            alert("Invalid Login Details!");
+        }
+    }
+    </script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="label">User Login</h1>
+			<form class="login_form" action= "home.html" method="post">
+				<div class="font">Email or Phone</div>
+				<input type="text" 
+				       placeholder="Email or Phone" name="email" id="email" required>
+				<div class="font font2">Password</div>
+				<input type="text" 
+				       placeholder="Password" name="pass" id="pass" required>
+				<br><br>
+				<a href="#">Forgot Password?</a>
+				<input type="submit" name="" value="Login" onclick="email_Verify">
+				<p align="center">Do you have an account? <a href="#">SignUp</a></p>
+				<br>
+			</form>
+	</div>
+</body>
+</html>
